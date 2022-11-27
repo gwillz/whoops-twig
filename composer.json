@@ -1,0 +1,21 @@
+{
+    "name": "whoops/twig",
+    "description": "Twig template support for Whoops",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Whoops\\Twig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gwilyn",
+            "email": "gwilyn@karmabunny.com.au"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.14",
+        "twig/twig": "^2|^3"
+    }
+}
