@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39d2fea369fd5dbe5c91a208b38dfa01",
+    "content-hash": "4b67c25fad71a84e10821bd0d4b4b17a",
     "packages": [
         {
             "name": "filp/whoops",
-            "version": "2.14.6",
+            "version": "dev-inspector-factory",
             "source": {
                 "type": "git",
-                "url": "https://github.com/filp/whoops.git",
-                "reference": "f7948baaa0330277c729714910336383286305da"
+                "url": "https://github.com/gwillz/whoops.git",
+                "reference": "ef643a39cf10c10886d1cec8a444b37ca651b486"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/f7948baaa0330277c729714910336383286305da",
-                "reference": "f7948baaa0330277c729714910336383286305da",
+                "url": "https://api.github.com/repos/gwillz/whoops/zipball/ef643a39cf10c10886d1cec8a444b37ca651b486",
+                "reference": "ef643a39cf10c10886d1cec8a444b37ca651b486",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +44,16 @@
                     "Whoops\\": "src/Whoops/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Whoops\\": "tests/Whoops/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit --testdox tests"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -66,16 +75,15 @@
                 "whoops"
             ],
             "support": {
-                "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.14.6"
+                "source": "https://github.com/gwillz/whoops/tree/inspector-factory"
             },
             "funding": [
                 {
-                    "url": "https://github.com/denis-sokolov",
-                    "type": "github"
+                    "type": "github",
+                    "url": "https://github.com/denis-sokolov"
                 }
             ],
-            "time": "2022-11-02T16:23:29+00:00"
+            "time": "2022-11-27T05:48:27+00:00"
         },
         {
             "name": "psr/log",
@@ -2162,7 +2170,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "filp/whoops": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
