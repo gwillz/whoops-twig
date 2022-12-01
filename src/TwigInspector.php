@@ -154,7 +154,7 @@ class TwigInspector extends Inspector
                 break;
             }
 
-            // Clean frames without a file, these are often string templates.
+            // Remove frames without a file, these are often string templates.
             if (empty($frame['file'])) {
                 if ($clean) unset($trace[$key]);
                 continue;
@@ -171,7 +171,7 @@ class TwigInspector extends Inspector
             $frame['file'] = $file;
             $frame['line'] = $line;
 
-            // Replace the
+            // Replace the function call with the twig source code.
             if ($code) {
                 $frame['function'] = $code;
                 unset($frame['class']);
